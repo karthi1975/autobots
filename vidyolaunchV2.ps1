@@ -88,7 +88,7 @@ $wshell.SendKeys('~')
 
 
 
-Start-Sleep -s 10
+Start-Sleep -s 20
 
 $vidyoConnectWindow = Get-Process | ? { $_.MainWindowTitle -eq 'VidyoConnect' } # Get VidyoConnect window handle.
 Set-WindowState  $vidyoConnectWindow MAXIMIZE # Maximize it.
@@ -104,7 +104,7 @@ stop-Process -processname "iexplore"
 stop-Process $vidyoConnectWindow 
 #Stop-process -Name VidyoConnect
 
-python motion_detector.py --video output5.avi
+python motion_detectorV2.py --video output5.avi
 
 
 
